@@ -1,0 +1,2114 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny"
+     xml:base="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:destiny="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny/2.5.0"/>
+        <rdfs:comment xml:lang="en">This is an ontology based on Destiny 2 videogame</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#defendedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#defendedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#defends"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#defends -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#defends">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#fightAgainst -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#fightAgainst">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#foughtBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#foughtBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#foughtBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasDamageType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasDamageType">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isDamageTypeOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isRaceOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isSubclassOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isDamageTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isDamageTypeOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isRaceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isRaceOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isSubclassOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#isSubclassOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasDamageType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcDamage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasDamageType"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcDamage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Subclass based on Arc damage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcDamage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcDamage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType"/>
+        <rdfs:comment xml:lang="en">This elemental damage type is related to electricity and has an area of effect. Blue shields are weak to Arc damage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcstriderSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcstriderSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Warrior_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Wind_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Current_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Warrior_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Wind_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Current_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Asteroid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Asteroid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Flame_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Flame_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Sky_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Sky_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Control_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Control_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Elements_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Elements_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Fission_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Fission_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Grace_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Grace_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Hunger_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Hunger_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalEnemy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalEnemy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A character is anything alive. It has one and only one race and can be a guardian or not.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Aggressor_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Aggressor_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Commander_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Commander_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Devastator_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Devastator_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Earthshaker_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Earthshaker_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Fireforged_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Fireforged_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Juggernaut_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Juggernaut_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Protector_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Protector_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Siegebreaker_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Siegebreaker_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DawnbladeSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DawnbladeSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Flame_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Sky_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Grace_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Flame_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Sky_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Grace_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenEnemy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenEnemy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Hunter"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Titan"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Warlock"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenRace"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoRace"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanRace"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mortal"/>
+        <rdfs:comment xml:lang="en">A character that has the power given by the Traveller. It must have one and olny one class type</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GunslingerSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GunslingerSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Outlaw_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Sharpshooter_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Outlaw_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Sharpshooter_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveEnemy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveEnemy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Hunter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Hunter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcstriderSubclass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GunslingerSubclass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NightstalkerSubclass"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">What does it mean to be a Hunter? I say, it’s all about where you belong. The Warlocks have their libraries, the Titans have their walls...But Hunters belong in the wilds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#KineticDamage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#KineticDamage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType"/>
+        <rdfs:comment xml:lang="en">Default damage type of most wapons and can be considered &quot;physical&quot; damage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Location">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Asteroid"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Moon"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Planet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Moon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Moon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mortal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mortal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A character that does not have the power given by the Traveller.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NightstalkerSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NightstalkerSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Trapper_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Wraith_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Trapper_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Wraith_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Planet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Planet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornEnemy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornEnemy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SentinelSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SentinelSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Aggressor_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Commander_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Protector_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Aggressor_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Commander_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Protector_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasDamageType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SolarDamage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasDamageType"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SolarDamage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Subclass based on Solar damage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SolarDamage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SolarDamage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType"/>
+        <rdfs:comment xml:lang="en">This elemental damage type causes fire damage and has a chance to ignite enemies. Orange shields are weak to Solar damage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StormcallerSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StormcallerSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Control_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Elements_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Control_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Elements_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StrikerSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StrikerSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Earthshaker_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Juggernaut_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Earthshaker_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Juggernaut_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SunbreakerSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SunbreakerSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Devastator_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Fireforged_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Siegebreaker_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Devastator_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Fireforged_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Siegebreaker_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenEnemy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenEnemy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Titan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Titan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SentinelSubclass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StrikerSubclass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SunbreakerSubclass"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">What does it mean to be a Titan? As a Titan, you are a part of the City - in a way no Warlock or Hunter could understand. The dream of the City rests upon our shoulders.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexCharacter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexCharacter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexEnemy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexEnemy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasRace"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasDamageType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidDamage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasDamageType"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidDamage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Subclass based on Void damage</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidDamage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidDamage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType"/>
+        <rdfs:comment xml:lang="en">This elemental damage type is related to gravity and dark energy. Purple shields are weak to Void damage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidwalkerSubclass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidwalkerSubclass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Guardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Fission_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Hunger_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#hasSubclass"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Fission_Path"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Hunger_Path"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Warlock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Warlock">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DawnbladeSubclass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StormcallerSubclass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidwalkerSubclass"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Warlocks have long studied the Traveler, mastering some of its arcane energies. Its true purpose remains a great mystery, but discovering truth has always driven you into the unknown. Now, our enemies are the only thing that stands between you and the lost wonders of our Golden Age.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Outlaw_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Outlaw_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Sharpshooter_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Sharpshooter_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Warrior_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Warrior_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Wind_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Wind_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Current_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Current_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Trapper_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Trapper_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Wraith_Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Wraith_Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos_Path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction_Path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Cabal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Cabal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalArmy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalArmy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Cabal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Captain_Dimonio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Captain_Dimonio">
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+        <destiny:hasSubclass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile_Path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Earth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Earth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Planet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Fallen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Fallen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenArmy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenArmy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Fallen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GwinbleiddFri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GwinbleiddFri">
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+        <destiny:hasSubclass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GunslingerSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Earth"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcstriderSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NightstalkerSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Nessus"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GunslingerSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Venus"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcstriderSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Earth"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NightstalkerSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GunslingerSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Io"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcstriderSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#H9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NightstalkerSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mercury"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Hive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Hive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Hive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Io -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Io">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Moon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Lucjfero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Lucjfero">
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+        <destiny:hasSubclass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Planet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mercury -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mercury">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Planet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Nessus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Nessus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Asteroid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Rickla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Rickla">
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+        <destiny:hasSubclass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Scorn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Scorn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornArmy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornArmy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Scorn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SunbreakerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Io"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StrikerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Nessus"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SentinelSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Venus"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SunbreakerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Earth"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StrikerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SentinelSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mercury"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SunbreakerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StrikerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Nessus"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#T9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SentinelSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Taken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Taken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenArmy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenArmy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Taken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Tred-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Tred-3">
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+        <destiny:hasSubclass rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Venus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Venus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Planet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Vex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Vex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexRace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexArmy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexArmy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Enemy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Vex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DawnbladeSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mercury"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StormcallerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Io"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidwalkerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Nessus"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Awoken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DawnbladeSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Venus"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HiveArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StormcallerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Earth"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#TakenArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidwalkerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Earth"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ScornArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Exo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DawnbladeSubclass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mercury"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StormcallerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mars"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#W9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NotableGuardian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidwalkerSubclass"/>
+        <destiny:defends rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Mercury"/>
+        <destiny:fightAgainst rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexArmy"/>
+        <destiny:hasRace rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Human"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts_Path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder_Path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Arc-Based_SubClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Solar-Based_SubClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Void-Based_SubClass"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcDamage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#KineticDamage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SolarDamage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidDamage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ArcstriderSubclass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DawnbladeSubclass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GunslingerSubclass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#NightstalkerSubclass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SentinelSubclass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StormcallerSubclass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#StrikerSubclass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#SunbreakerSubclass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VoidwalkerSubclass"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Flame_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_Of_Sky_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Grace_Path"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Chaos_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Fission_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Hunger_Path"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Conduction_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Control_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Attunement_of_Elements_Path"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenCharacter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#CabalCharacter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoCharacter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#FallenCharacter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanCharacter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#VexCharacter"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#AwokenRace"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#ExoRace"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#HumanRace"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Character"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#DamageType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Race"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Subclass"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Aggressor_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Commander_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Protector_Path"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Devastator_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Fireforged_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Siegebreaker_Path"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Earthshaker_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Juggernaut_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Code_of_the_Missile_Path"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Hunter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Titan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Warlock"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Outlaw_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Sharpshooter_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_a_Thousand_Cuts_Path"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Warrior_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_Of_The_Wind_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Current_Path"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Pathfinder_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Trapper_Path"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Way_of_the_Wraith_Path"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+

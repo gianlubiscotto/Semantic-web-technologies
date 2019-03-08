@@ -1,0 +1,50 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#"
+    xmlns:j.1="http://xmlns.com/foaf/0.1/">
+  <j.1:Person rdf:about="http://achieveme.altervista.org/Gianluca#me">
+    <j.1:nick>Gianlubiscotto</j.1:nick>
+    <j.1:knows>
+      <j.1:Person rdf:about="http://achieveme.altervista.org/Gianluca#Adelmo_Cesaritti">
+        <j.0:plays>http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Captain_Dimonio</j.0:plays>
+        <j.1:nick>Captain_Dimonio</j.1:nick>
+        <j.1:givenName>Adelmo</j.1:givenName>
+        <j.1:familyName>Cesaritti</j.1:familyName>
+      </j.1:Person>
+    </j.1:knows>
+    <j.1:knows>
+      <j.1:Person rdf:about="http://achieveme.altervista.org/Gianluca#Federico_Frisoli">
+        <j.0:plays>http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#GwinbleiddFri</j.0:plays>
+        <j.1:nick>GwinbleiddFri</j.1:nick>
+        <j.1:givenName>Federico</j.1:givenName>
+        <j.1:familyName>Frisoli</j.1:familyName>
+      </j.1:Person>
+    </j.1:knows>
+    <j.1:knows>
+      <j.1:Person rdf:about="http://achieveme.altervista.org/Gianluca#Mattia_Bonanno">
+        <j.0:plays>http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Tred-3</j.0:plays>
+        <j.1:nick>Tred-3</j.1:nick>
+        <j.1:givenName>Mattia</j.1:givenName>
+        <j.1:familyName>Bonanno</j.1:familyName>
+      </j.1:Person>
+    </j.1:knows>
+    <j.1:knows>
+      <j.1:Person rdf:about="http://achieveme.altervista.org/Gianluca#Riccardo_Runcino">
+        <j.0:plays>http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Rickla</j.0:plays>
+        <j.1:nick>Rickla</j.1:nick>
+        <j.1:givenName>Riccardo</j.1:givenName>
+        <j.1:familyName>Runcino</j.1:familyName>
+      </j.1:Person>
+    </j.1:knows>
+    <j.1:knows>
+      <j.1:Person rdf:about="http://achieveme.altervista.org/Gianluca#Francesco_Zuk">
+        <j.0:plays>http://www.semanticweb.org/gianluca/ontologies/2018/11/destiny#Lucjfero</j.0:plays>
+        <j.1:nick>Lucjfero</j.1:nick>
+        <j.1:givenName>Francesco</j.1:givenName>
+        <j.1:familyName>Zuk</j.1:familyName>
+      </j.1:Person>
+    </j.1:knows>
+    <j.1:givenName>Gianluca</j.1:givenName>
+    <j.1:familyName>Ceccoli</j.1:familyName>
+  </j.1:Person>
+</rdf:RDF>

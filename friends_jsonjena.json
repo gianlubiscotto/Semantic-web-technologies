@@ -1,0 +1,55 @@
+{
+  "@graph" : [ {
+    "@id" : "http://achieveme.altervista.org/Gianluca#Adelmo_Cesaritti",
+    "@type" : "http://xmlns.com/foaf/0.1/Person",
+    "familyName" : "Cesaritti",
+    "givenName" : "Adelmo",
+    "nick" : "Captain_Dimonio"
+  }, {
+    "@id" : "http://achieveme.altervista.org/Gianluca#Federico_Frisoli",
+    "@type" : "http://xmlns.com/foaf/0.1/Person",
+    "familyName" : "Frisoli",
+    "givenName" : "Federico",
+    "nick" : "GwinbleiddFri"
+  }, {
+    "@id" : "http://achieveme.altervista.org/Gianluca#Francesco_Zuk",
+    "@type" : "http://xmlns.com/foaf/0.1/Person",
+    "familyName" : "Zuk",
+    "givenName" : "Francesco",
+    "nick" : "Lucjfero"
+  }, {
+    "@id" : "http://achieveme.altervista.org/Gianluca#Mattia_Bonanno",
+    "@type" : "http://xmlns.com/foaf/0.1/Person",
+    "familyName" : "Bonanno",
+    "givenName" : "Mattia",
+    "nick" : "Tred-3"
+  }, {
+    "@id" : "http://achieveme.altervista.org/Gianluca#Riccardo_Runcino",
+    "@type" : "http://xmlns.com/foaf/0.1/Person",
+    "familyName" : "Runcino",
+    "givenName" : "Riccardo",
+    "nick" : "Rickla"
+  }, {
+    "@id" : "http://achieveme.altervista.org/Gianluca#me",
+    "@type" : "http://xmlns.com/foaf/0.1/Person",
+    "familyName" : "Ceccoli",
+    "givenName" : "Gianluca",
+    "knows" : [ "http://achieveme.altervista.org/Gianluca#Francesco_Zuk", "http://achieveme.altervista.org/Gianluca#Riccardo_Runcino", "http://achieveme.altervista.org/Gianluca#Mattia_Bonanno", "http://achieveme.altervista.org/Gianluca#Federico_Frisoli", "http://achieveme.altervista.org/Gianluca#Adelmo_Cesaritti" ],
+    "nick" : "Gianlubiscotto"
+  } ],
+  "@context" : {
+    "nick" : {
+      "@id" : "http://xmlns.com/foaf/0.1/nick"
+    },
+    "familyName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/familyName"
+    },
+    "givenName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/givenName"
+    },
+    "knows" : {
+      "@id" : "http://xmlns.com/foaf/0.1/knows",
+      "@type" : "@id"
+    }
+  }
+}
